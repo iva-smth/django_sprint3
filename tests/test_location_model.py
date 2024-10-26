@@ -1,7 +1,7 @@
 import pytest
+from blog.models import Location
 from django.db.models import BooleanField, CharField, DateTimeField
 
-from blog.models import Location
 from tests.conftest import _TestModelAttrs
 
 
@@ -10,7 +10,7 @@ from tests.conftest import _TestModelAttrs
     ('is_published', BooleanField, {'default': True}),
     ('created_at', DateTimeField, {'auto_now_add': True}),
 ])
-class TestCategoryModelAttrs(_TestModelAttrs):
+class TestLocationModelAttrs(_TestModelAttrs):
 
     @property
     def model(self):
